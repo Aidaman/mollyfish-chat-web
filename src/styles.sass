@@ -1,6 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/_typography'
+@import './styles/_colors'
+@import './styles/_adaptive'
 
-body, html
+@font-face
+  font-family: 'quicksand'
+  src: url('assets/fonts/quicksand.ttf')
+
+body
   margin: 0
   padding: 0
+
+:root
+  --error-color: #f0315a
+  --on-error-color: #fefefe
+
+  --positive-color: #22D020
+  --on-positive-color: #212121
+
+  --light-primary-color: #003049
+  --light-primary-color: #0069a0
+  --light-primary-darker-color: #00263a
+  --light-on-secondary-color: #fefefe
+
+  --light-secondary-color: #AB0303
+  --light-secondary-color: #ed0404
+  --light-secondary-darker-color: #890202
+  --light-on-secondary-color: #fefefe
+
+  --light-accent-color: #ff9f38
+  --light-accent-color: #ffb260
+  --light-accent-darker-color: #f98100
+  --light-on-accent-color: #212121
+
+  --light-background-color: #fefefe
+  --light-foreground-color: #212121
+
+  --dark-primary-color: #0F3750
+  --dark-primary-lighter-color: #1c6796
+  --dark-primary-darker-color: #0c2c40
+  --dark-on-primary-color: #fefefe
+
+  --dark-secondary-color: #820909
+  --dark-secondary-lighter-color: #c70e0e
+  --dark-secondary-darker-color: #680707
+  --dark-on-secondary-color: #fefefe
+
+  --dark-accent-color: #FF9F38
+  --dark-accent-lighter-color: #ffb260
+  --dark-accent-darker-color: #f98100
+  --dark-on-accent-color: #212121
+
+  --dark-background-color: #212121
+  --dark-foreground-color: #fefefe
+
+body.theme-dark
+  background: var(--light-background-color)
+  color: var(--light-foreground-color)
+
+body.theme-dark
+  background: var(--dark-background-color)
+  color: var(--dark-foreground-color)
+
+h1
+  background: var(--error-color)
+  color: var(--on-error-color)
