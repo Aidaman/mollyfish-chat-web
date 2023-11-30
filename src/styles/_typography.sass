@@ -1,64 +1,72 @@
-h1
+@mixin header-common()
+  font-weight: bold
+  line-height: 1.5
+  margin: 0
+  padding: 0
+
+@mixin header-1
   font-size: 2.986rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-h2
+@mixin header-2
   font-size: 2.488rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-h3
+@mixin header-3
   font-size: 2.074rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-h4
+@mixin header-4
   font-size: 1.728rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-h5
+@mixin header-5
   font-size: 1.44rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-h6
+@mixin header-6
   font-size: 1.2rem
-  font-weight: bold
-  line-height: 1.5
-  margin: 0
-  padding: 0
+  @include header-common()
 
-p
+@mixin regular-text()
   font-size: 1rem
   font-weight: normal
   line-height: 1.5
 
-small
+@mixin small-text()
   font-size: 0.833rem
   font-weight: normal
   line-height: 1.5
 
+h1
+  @include header-1
+
+h2
+  @include header-2
+
+h3
+  @include header-3
+
+h4
+  @include header-4
+
+h5
+  @include header-5
+
+h6
+  @include header-6
+
+p
+  @include regular-text()
+
+small
+  @include small-text()
+
 small.note
-  font-size: 0.694rem
-  font-weight: normal
-  line-height: 1.5
+  @include small-text()
   opacity: 0.64
 
 a
-  font-size: 0.833rem
-  font-weight: normal
-  line-height: 1.5
+  @include small-text()
   text-decoration: none
   color: var(--primary-color)
