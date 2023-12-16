@@ -1,0 +1,36 @@
+@import '_typography.sass'
+
+button.mollyfish-button
+  padding: 0.5rem 3rem
+  border: none
+  border-radius: 12px
+  transition: all 250ms
+
+  &--primary
+    background: var(--primary-color)
+    color: var(--on-primary-color)
+    &:hover
+      background: var(--primary-lighter-color)
+
+  &--secondary
+    background: var(--secondary-color)
+    color: var(--on-secondary-color)
+    &:hover
+      background: var(--secondary-lighter-color)
+
+  &--accent
+    background: var(--accent-color)
+    color: var(--on-accent-color)
+    &:hover
+      background: var(--accent-lighter-color)
+
+  &--positive
+    background: var(--positive-color)
+    color: var(--on-positive-color)
+
+  &--error
+    background: var(--error-color)
+    color: var(--on-error-color)
+
+  &:hover
+    cursor: pointer
