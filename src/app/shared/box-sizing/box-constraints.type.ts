@@ -1,25 +1,25 @@
 export type BoxConstraint =
   | {
-      width: number;
-      height: number;
+      width: string;
+      height: string;
     }
   | {
-      width: number;
-      height: number;
-      minWidth?: number;
-      minHeight?: number;
+      width: string;
+      height: string;
+      minWidth?: string;
+      minHeight?: string;
     }
   | {
-      width: number;
-      height: number;
-      maxWidth?: number;
-      maxHeight?: number;
+      width: string;
+      height: string;
+      maxWidth?: string;
+      maxHeight?: string;
     }
   | {
-      width: number;
-      height: number;
-      minWidth?: number;
-      minHeight?: number;
-      maxWidth?: number;
-      maxHeight?: number;
+      width: string;
+      height: string;
+      minWidth?: string;
+      minHeight?: string;
+      maxWidth?: string;
+      maxHeight?: string;
     };
