@@ -1,5 +1,16 @@
 import { AbstractControl, ControlValueAccessor } from '@angular/forms';
 
+/* If someone wants to create some custom input — they should extend this class */
+/* They also should add this to their component:
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => RatingInputComponent),
+      multi: true
+    }
+  ]
+*/
+
 export abstract class CustomInput implements ControlValueAccessor {
   public val: any;
   public disabled: boolean = false;
